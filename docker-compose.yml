@@ -1,18 +1,19 @@
-relay:
-  image: local/tor-server
+tor-exit-node:
+  #image: local/tor-server
+  build: .
   restart: always
   ports:
     - "9001:9001"
-    #- "9030:9030"
+    - "9030:9030"
     #- "54444:54444"
   environment:
     ## set your Nickname here (only use letters and numbers)
-    TOR_NICKNAME: Tor4
+    TOR_NICKNAME: "thenorthremembers"
     ## an email address to contact you
-    #CONTACT_EMAIL: email@example.org
-  #volumes:
+    CONTACT_EMAIL: "ironchamp2 at protonmail dot ch"
+  volumes:
     ## mount custom torrc / secret_id_key here
-    #- ./torrc:/etc/tor/torrc
+    - ./torrc/torrc:/etc/tor/torrc
     #- ./secret_id_key:/var/lib/tor/keys/secret_id_key
   log_opt:
       max-size: "512k"
