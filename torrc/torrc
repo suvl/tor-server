@@ -39,7 +39,7 @@ Log notice file /var/log/tor/notices.log
 ## Send every possible message to /var/log/tor/debug.log
 #Log debug file /var/log/tor/debug.log
 ## Use the system log instead of Tor's logfiles
-Log debug syslog
+Log debug stdout
 ## To send all messages to stderr:
 #Log debug stderr
 
@@ -91,7 +91,7 @@ ORPort 9001
 
 ## The IP address or full DNS name for incoming connections to your
 ## relay. Leave commented out and Tor will guess.
-Address 8ea972ae-d488-45de-8f87-88aaa9700b24.pub.cloud.scaleway.com 
+#Address 8ea972ae-d488-45de-8f87-88aaa9700b24.pub.cloud.scaleway.com 
 
 ## If you have multiple network interfaces, you can specify one for
 ## outgoing traffic to use.
